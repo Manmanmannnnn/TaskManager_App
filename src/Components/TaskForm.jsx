@@ -1,8 +1,8 @@
-import React from 'react';
+import './TaskForm.css';
 
 function TaskForm({ taskInfo, handleTaskInfo, handleAddTask }) {
   return (
-    <div>
+    <div className='inputArea'>
       <input
         value={taskInfo.name}
         onChange={(e) => handleTaskInfo(e)}

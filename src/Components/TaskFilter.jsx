@@ -1,16 +1,15 @@
-import React from 'react';
-
+import './TaskFilter.css';
 function TaskFilter({ handleCategory }) {
   return (
-    <div>
+    <div className='buttonArea'>
       <button value='All' onClick={(e) => handleCategory(e)}>
         All
       </button>
       <button value='completed' onClick={(e) => handleCategory(e)}>
-        completed
+        Completed
       </button>
       <button value='not completed' onClick={(e) => handleCategory(e)}>
-        not completed
+        Not Completed
       </button>
     </div>
   );

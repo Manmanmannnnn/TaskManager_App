@@ -2,9 +2,8 @@ import { useState } from 'react';
 import TaskForm from './Components/TaskForm';
 import TaskList from './Components/TaskList';
 import Task from './Components/Task';
-import { SiTruenas } from 'react-icons/si';
 import TaskFilter from './Components/TaskFilter';
-
+import './index.css';
 function App() {
   //task states
   // const [task, setTask] = useState('');
@@ -72,15 +71,17 @@ function App() {
   const result = filteredData(category, taskList);
 
   return (
-    <>
+    <div className='taskStyle'>
       <TaskForm
         taskInfo={taskInfo}
         handleTaskInfo={handleTaskInfo}
         handleAddTask={handleAddTask}
       />
-      <TaskFilter handleCategory={handleCategory} />
-      <TaskList result={result} />
-    </>
+      <div className='contentArea'>
+        <TaskFilter handleCategory={handleCategory} />
+        <TaskList result={result} />
+      </div>
+    </div>
   );
 }
 

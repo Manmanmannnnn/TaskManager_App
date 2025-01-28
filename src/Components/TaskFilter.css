@@ -1,0 +1,12 @@
+.buttonArea {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 5px;
+  font-size: 1.5rem;
+}
